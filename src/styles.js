@@ -72,7 +72,7 @@ const obj = {
     }
     @media screen and (min-width: 800px) {
       // computer
-      padding: 25px 100px;
+      padding: 25px 0;
       > .second-1 {
         justify-content: center;
       }
@@ -107,17 +107,23 @@ const obj = {
       // computer
       padding: 25px 10px;
     }
+    overflow-x: hidden;
+    width: 100%;
 
     > .third-1 {
       margin-top: 25px;
-      width: 100%;
       display: flex;
-      overflow-x: auto;
-      > .third-1-card {
-        margin-right: 25px;
+      width: 100%;
+      transform: translateX(0);
 
-        :last-child {
-          margin-right: 0;
+      > .third-1-content {
+        display: flex;
+        > .third-1-card {
+          margin-right: 25px;
+
+          :last-child {
+            margin-right: 0;
+          }
         }
       }
     }

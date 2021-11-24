@@ -9,12 +9,11 @@ import share from './commons/assets/share.png'
 import play from './commons/assets/play.png'
 import ready from './commons/assets/ready.png'
 import riswan from './commons/assets/riswan.png'
-import quran from './commons/assets/quran.jpg'
 import Button from 'commons/ui/button'
 import TitleLine from 'commons/ui/titleLine'
 import Icon from 'commons/ui/icon'
-import Card from 'commons/ui/card'
 import theme from 'theme'
+import Slider from 'commons/components/Slider'
 // {mobileView ? '' : ''}
 function App() {
   const [isMoving, setIsMoving] = useState(false)
@@ -110,34 +109,7 @@ function App() {
         <Styled.Third>
           <TitleLine size={mobileView ? '20px' : '36px'}>Amazing things are happening</TitleLine>
           <div className="third-1">
-            {new Array(4).fill().map(() => (
-              <Card
-                className="third-1-card"
-                width={mobileView ? '380px' : '600px'}
-                height={mobileView ? '200px' : '308px'}
-                rightGrid={mobileView ? '120px' : '200px'}
-                src={quran}
-                alt="quran"
-              >
-                <Text
-                  weight={800}
-                  size={mobileView ? '20px' : '30px'}
-                  color="#ffffff"
-                  margin={mobileView ? '20px 0' : '40px 0'}
-                >
-                  Quranic Classroom
-                </Text>
-                <Text
-                  height="24px"
-                  weight={400}
-                  size={mobileView ? '15px' : '20px'}
-                  width={mobileView ? '200px' : '251px'}
-                  color="#ffffff"
-                >
-                  The next generation of rabbanian learning.
-                </Text>
-              </Card>
-            ))}
+            <Slider mobileView={mobileView} />
           </div>
         </Styled.Third>
         <Styled.Fourth>
